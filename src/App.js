@@ -5,8 +5,19 @@ import { Container, Image, ContainerItems, H1, InputLabel, Input, Button } from 
 const App = () => {
   return (
     <Container>
-      <H1>Olá!</H1>
+      <Image />
 
+      <ContainerItems>
+        <H1>Olá!</H1>
+
+        <InputLabel>Nome</InputLabel>
+        <Input placeholder="Nome" />
+
+        <InputLabel>Idade</InputLabel>
+        <Input placeholder="Idade" />
+
+        <Button>Cadastrar</Button>
+      </ContainerItems>
     </Container>
   );
 }

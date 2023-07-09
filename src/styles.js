@@ -2,20 +2,19 @@ import styled from 'styled-components'
 
 
 export const Container = styled.div`
-    background-color: red;
+
 `;
 
 export const Image = styled.img`
 
 `;
 
-export const ContainerItems = styled.img`
+export const ContainerItems = styled.div`
 
 `;
 
 export const H1 = styled.h1`
-    color: white;
-    font-size: 20px;
+
 `
 
 export const InputLabel = styled.p`
