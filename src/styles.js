@@ -1,8 +1,10 @@
 import styled from 'styled-components'
+import Background from  './assets/background1.png'
 
 
 export const Container = styled.div`
-
+    background: url(${Background});
+    background-size: cover;
 `;
 
 export const Image = styled.img`
@@ -15,7 +17,7 @@ export const ContainerItems = styled.div`
 
 export const H1 = styled.h1`
 
-`
+`;
 
 export const InputLabel = styled.p`
 
