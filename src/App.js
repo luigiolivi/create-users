@@ -6,12 +6,22 @@ import Trash from "./assets/trash.png"
 
 import { Container, Image, ContainerItems, H1, InputLabel, Input, Button, User } from "./styles"
 
-const App = () => {
+function App() {
   const [users, setUsers] = useState([]);
+  const [name, setName] = useState()
+  const [age, setAge] = useState()
 
-  const addNewUser = () => {
-    setUsers([])
+  function addNewUser() {
+    setUsers([{id: Math.random(), name, age}])
   }
+
+  function changeInputName(value) {
+    setName(value.target.value)
+  } 
+
+  function changeInputAge(value) {
+    setAge(value.target.value)
+  } 
 
   return (
     <Container>
@@ -21,18 +31,18 @@ const App = () => {
         <H1>Olá!</H1>
 
         <InputLabel>Nome</InputLabel>
-        <Input placeholder="Nome" />
+        <Input placeholder="Nome" onChange={changeInputName}/>
 
         <InputLabel>Idade</InputLabel>
-        <Input placeholder="Idade" />
+        <Input placeholder="Idade" onChange={changeInputAge}/>
 
-        <Button>Cadastrar <img alt="right-arrow" src={Right}/></Button>
+        <Button onClick={addNewUser}>Cadastrar <img alt="right-arrow" src={Right}/></Button>
 
         <ul>
           {users.map((user) => (
             <User key={user.id}>
               <p>{user.name}</p> <p>{user.age}</p>
-              <button onClick={addNewUser}><img src={Trash} alt="trash-logo"/></button>
+              <button><img src={Trash} alt="trash-logo"/></button>
             </User>
           ))}
         </ul>
