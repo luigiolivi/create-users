@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import Talking from "./assets/talking.png"
 import Right from "./assets/right.png"
@@ -7,10 +7,11 @@ import Trash from "./assets/trash.png"
 import { Container, Image, ContainerItems, H1, InputLabel, Input, Button, User } from "./styles"
 
 const App = () => {
-  const users = [
-    { id: Math.random(), name: "Luigi", age: 18 },
-    { id: Math.random(), name: "Carlos", age: 19}
-  ];
+  const [users, setUsers] = useState([]);
+
+  const addNewUser = () => {
+    setUsers([])
+  }
 
   return (
     <Container>
@@ -31,7 +32,7 @@ const App = () => {
           {users.map((user) => (
             <User key={user.id}>
               <p>{user.name}</p> <p>{user.age}</p>
-              <button><img src={Trash} alt="trash-logo"/></button>
+              <button onClick={addNewUser}><img src={Trash} alt="trash-logo"/></button>
             </User>
           ))}
         </ul>
