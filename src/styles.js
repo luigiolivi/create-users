@@ -11,7 +11,7 @@ export const Container = styled.div`
     align-items: center;
     gap: 40px;
 
-    height: 100vh;
+    height: 100%;
 `;
 
 export const Image = styled.img`
@@ -27,7 +27,7 @@ export const ContainerItems = styled.div`
     display: flex;
     flex-direction: column;
 
-    height: 100vh;
+    height: 100%;
 `;
 
 export const H1 = styled.h1`
@@ -96,4 +96,12 @@ export const Button = styled.button`
     align-items: center;
     justify-content: center;
     gap: 15px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
 `;
