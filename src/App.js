@@ -2,8 +2,9 @@ import React from "react"
 
 import Talking from "./assets/talking.png"
 import Right from "./assets/right.png"
+import Trash from "./assets/trash.png"
 
-import { Container, Image, ContainerItems, H1, InputLabel, Input, Button } from "./styles"
+import { Container, Image, ContainerItems, H1, InputLabel, Input, Button, User } from "./styles"
 
 const App = () => {
   const users = [
@@ -28,9 +29,10 @@ const App = () => {
 
         <ul>
           {users.map((user) => (
-            <li key={user.id}>
-              {user.name} - {user.age}
-            </li>
+            <User key={user.id}>
+              <p>{user.name}</p> <p>{user.age}</p>
+              <button><img src={Trash} alt="trash-logo"/></button>
+            </User>
           ))}
         </ul>
       </ContainerItems>
