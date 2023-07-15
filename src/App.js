@@ -20,6 +20,11 @@ function App() {
     }])
   }
 
+  function deleteUser(userId) {
+    const newUsers = users.filter( user => user.id !== userId )
+    setUsers(newUsers)
+  }
+
   return (
     <Container>
       <Image alt="logo-image" src={Talking} />
@@ -27,11 +32,11 @@ function App() {
       <ContainerItems>
         <H1>Olá!</H1>
 
-        <InputLabel ref={inputName}>Nome</InputLabel>
-        <Input placeholder="Nome" />
+        <InputLabel >Nome</InputLabel>
+        <Input placeholder="Nome" ref={inputName}/>
 
-        <InputLabel ref={inputAge}>Idade</InputLabel>
-        <Input placeholder="Idade" />
+        <InputLabel >Idade</InputLabel>
+        <Input placeholder="Idade" ref={inputAge}/>
 
         <Button onClick={addNewUser}>Cadastrar <img alt="right-arrow" src={Right} /></Button>
 
@@ -39,7 +44,7 @@ function App() {
           {users.map((user) => (
             <User key={user.id}>
               <p>{user.name}</p> <p>{user.age}</p>
-              <button><img src={Trash} alt="trash-logo" /></button>
+              <button onClick={() => deleteUser(user.id)}><img src={Trash} alt="trash-logo" /></button>
             </User>
           ))}
         </ul>
