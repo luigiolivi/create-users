@@ -2,9 +2,9 @@ import React, { useState, useRef, useEffect } from "react"
 
 import axios from "axios"
 
-import Talking from "./assets/talking.png"
-import Right from "./assets/right.png"
-import Trash from "./assets/trash.png"
+import Talking from "../../assets/talking.png"
+import Right from "../../assets/right.png"
+import Trash from "../../assets/trash.png"
 
 import { Container, Image, ContainerItems, H1, InputLabel, Input, Button, User } from "./styles"
 
