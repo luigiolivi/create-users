@@ -30,7 +30,7 @@ function App() {
     }
 
     fetchUsers()
-  }, [users])
+  }, [])
 
   function deleteUser(userId) {
     const newUsers = users.filter(user => user.id !== userId)
