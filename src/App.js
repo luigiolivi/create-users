@@ -19,10 +19,10 @@ function App() {
       name: inputName.current.value,
       age: inputAge.current.value,
     })
-
-    console.log(newUser)
-
     setUsers([...users, newUser])
+
+    const { data: newUsers } = await axios.get("http://localhost:3001/users")
+    setUsers(newUsers)
   }
 
   function deleteUser(userId) {
