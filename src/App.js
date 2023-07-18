@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 
 import axios from "axios"
 
@@ -14,16 +14,23 @@ function App() {
   const inputAge = useRef();
 
   async function addNewUser() {
-
     const { data: newUser } = await axios.post("http://localhost:3001/users", {
       name: inputName.current.value,
       age: inputAge.current.value,
     })
-    setUsers([...users, newUser])
 
-    const { data: newUsers } = await axios.get("http://localhost:3001/users")
-    setUsers(newUsers)
+    setUsers([...users, newUser])
   }
+
+  useEffect(() => {
+    async function fetchUsers() {
+      const { data: newUsers } = await axios.get("http://localhost:3001/users")
+      
+      setUsers(newUsers)
+    }
+
+    fetchUsers()
+  }, [users])
 
   function deleteUser(userId) {
     const newUsers = users.filter(user => user.id !== userId)
