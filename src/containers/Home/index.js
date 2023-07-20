@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react"
-
+import { Link } from 'react-router-dom'
 import axios from "axios"
 
 import Talking from "../../assets/talking.png"
@@ -7,7 +7,7 @@ import Right from "../../assets/right.png"
 
 import { Container, Image, ContainerItems, H1, InputLabel, Input, Button } from "./styles"
 
-function App() {
+function Users() {
   const [users, setUsers] = useState([]);
   const inputName = useRef();
   const inputAge = useRef();
@@ -35,9 +35,11 @@ function App() {
         <Input placeholder="Idade" ref={inputAge} />
 
         <Button onClick={addNewUser}>Cadastrar <img alt="right-arrow" src={Right} /></Button>
+
+        <Link to="/users">Usuários</Link>
       </ContainerItems>
     </Container>
   );
 }
 
-export default App
+export default Users
