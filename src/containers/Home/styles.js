@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+
 import Background from '../../assets/background1.png'
 
 
@@ -11,7 +13,7 @@ export const Container = styled.div`
     align-items: center;
     gap: 40px;
 
-    height: 100%;
+    height: 100vh;
 `;
 
 export const Image = styled.img`
@@ -75,7 +77,7 @@ export const Input = styled.input`
     line-height: normal;
 `;
 
-export const Button = styled.button`
+export const Button = styled(Link)`
     border-radius: 14px;
     border: none;
     background: rgba(0, 0, 0, 0.80);
@@ -99,11 +101,7 @@ export const Button = styled.button`
     justify-content: center;
     gap: 15px;
 
-    &:hover {
-        opacity: 0.8;
-    }
+    &:hover { opacity: 0.8; }
 
-    &:active {
-        opacity: 0.6;
-    }
+    &:active { opacity: 0.6; }
 `;

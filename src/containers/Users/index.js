@@ -43,7 +43,7 @@ function App() {
           ))}
         </ul>
 
-        <Button><img alt ="left-arrow" src={Left} /> Voltar</Button>
+        <Button to="/"><img alt ="left-arrow" src={Left} /> Voltar</Button>
 
       </ContainerItems>
     </Container>

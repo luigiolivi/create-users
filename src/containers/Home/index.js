@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react"
-import { Link } from 'react-router-dom'
 import axios from "axios"
 
 import Talking from "../../assets/talking.png"
@@ -34,9 +33,7 @@ function Users() {
         <InputLabel >Idade</InputLabel>
         <Input placeholder="Idade" ref={inputAge} />
 
-        <Button onClick={addNewUser}>Cadastrar <img alt="right-arrow" src={Right} /></Button>
-
-        <Link to="/users">Usuários</Link>
+        <Button to="/users" onClick={addNewUser}>Cadastrar <img alt="right-arrow" src={Right} /></Button>
       </ContainerItems>
     </Container>
   );
