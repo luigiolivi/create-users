@@ -8,7 +8,8 @@ import Left from "../../assets/left.png"
 import Trash from "../../assets/trash.png"
 
 import H1 from '../../components/Title'
-import { Container, Image, ContainerItems, Button, User } from "./styles"
+import ContainerItems from "../../components/ContainerItems"
+import { Container, Image, Button, User } from "./styles"
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -39,7 +40,7 @@ function App() {
     <Container>
       <Image alt="logo-image" src={People} />
 
-      <ContainerItems>
+      <ContainerItems isBlur={true}>
         <H1>Usuários</H1>
 
         <ul>

@@ -30,7 +30,6 @@ export const ContainerItems = styled.div`
     flex-direction: column;
 
     height: 100%;
-    min-height: calc(100vh - 170px);
 `;
 
 export const InputLabel = styled.p`
