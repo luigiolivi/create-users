@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import Background from '../../assets/background1.png'
 
 
@@ -12,6 +13,7 @@ export const Container = styled.div`
     gap: 40px;
 
     height: 100%;
+    min-height: 100vh;
 `;
 
 export const Image = styled.img`
@@ -28,18 +30,7 @@ export const ContainerItems = styled.div`
     flex-direction: column;
 
     height: 100%;
-`;
-
-export const H1 = styled.h1`
-    color: white;
-
-    font-size: 34px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-
-    text-align: center;
-    margin-bottom: 80px;
+    min-height: calc(100vh - 170px);
 `;
 
 export const InputLabel = styled.p`
@@ -99,11 +90,7 @@ export const Button = styled.button`
     justify-content: center;
     gap: 15px;
 
-    &:hover {
-        opacity: 0.8;
-    }
+    &:hover { opacity: 0.8; }
 
-    &:active {
-        opacity: 0.6;
-    }
+    &:active { opacity: 0.6; }
 `;

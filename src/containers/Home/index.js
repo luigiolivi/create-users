@@ -1,16 +1,19 @@
 import React, { useState, useRef } from "react"
-
 import axios from "axios"
+import { useHistory } from 'react-router-dom'
 
 import Talking from "../../assets/talking.png"
 import Right from "../../assets/right.png"
 
-import { Container, Image, ContainerItems, H1, InputLabel, Input, Button } from "./styles"
+import H1 from '../../components/Title'
+import { Container, Image, ContainerItems, InputLabel, Input, Button } from "./styles"
 
-function App() {
+function Users() {
   const [users, setUsers] = useState([]);
   const inputName = useRef();
   const inputAge = useRef();
+
+  const history = useHistory()
 
   async function addNewUser() {
     const { data: newUser } = await axios.post("http://localhost:3001/users", {
@@ -19,6 +22,8 @@ function App() {
     })
 
     setUsers([...users, newUser])
+
+    history.push("/users")
   }
 
   return (
@@ -40,4 +45,4 @@ function App() {
   );
 }
 
-export default App
+export default Users
