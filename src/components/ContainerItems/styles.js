@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 export const ContainerItems = styled.div`
     border-radius: 61px 61px 0px 0px;

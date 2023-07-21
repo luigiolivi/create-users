@@ -18,36 +18,6 @@ export const Image = styled.img`
     margin-top: 30px;
 `;
 
-export const Button = styled.button`
-    border-radius: 14px;
-    border: none;
-    background: transparent;
-    margin-top: 120px;
-
-    width: 342px;
-    height: 74px;
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 28px;
-
-    padding: 23px 148px 23px 101px;
-    align-items: center;
-    gap: 24.055px;
-
-    color: white;
-    border: 1px solid #FFF;
-
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-
-    &:hover { opacity: 0.8; }
-    &:active { opacity: 0.6; }
-`;
-
 export const User = styled.li`
     display: flex;
     justify-content: space-around;

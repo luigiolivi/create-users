@@ -9,7 +9,8 @@ import Trash from "../../assets/trash.png"
 
 import H1 from '../../components/Title'
 import ContainerItems from "../../components/ContainerItems"
-import { Container, Image, Button, User } from "./styles"
+import Button from "../../components/Button"
+import { Container, Image, User } from "./styles"
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -52,7 +53,7 @@ function App() {
           ))}
         </ul>
 
-        <Button onClick={goHomePage}><img alt ="left-arrow" src={Left} /> Voltar</Button>
+        <Button isBack={true} onClick={goHomePage}><img alt ="left-arrow" src={Left} /> Voltar</Button>
 
       </ContainerItems>
     </Container>
