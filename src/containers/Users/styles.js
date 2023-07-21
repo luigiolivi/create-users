@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 import Background from '../../assets/background2.png'
 
 export const Container = styled.div`
@@ -11,7 +10,8 @@ export const Container = styled.div`
     align-items: center;
     gap: 40px;
 
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
 `;
 
 export const Image = styled.img`
@@ -29,20 +29,10 @@ export const ContainerItems = styled.div`
     flex-direction: column;
 
     height: 100%;
+    min-height: calc(100vh - 170px);
 `;
 
-export const H1 = styled.h1`
-    color: white;
-
-    font-size: 34px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-
-    text-align: center;
-`;
-
-export const Button = styled(Link)`
+export const Button = styled.button`
     border-radius: 14px;
     border: none;
     background: transparent;
@@ -69,7 +59,6 @@ export const Button = styled(Link)`
     justify-content: center;
 
     &:hover { opacity: 0.8; }
-
     &:active { opacity: 0.6; }
 `;
 
@@ -99,6 +88,7 @@ export const User = styled.li`
     }
 
     button {
+        padding-left: 0;
         background: none;
         border: none;
         cursor: pointer;
