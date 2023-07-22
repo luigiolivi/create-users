@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const Button = styled.button`
     border-radius: 14px;
-    border: none;
-    background: rgba(0, 0, 0, 0.80);
+    border: ${props => props.isBack ? '1px solid #FFF' : 'none'};
+    background: ${props => props.isBack ? 'transparent' : 'rgba(0, 0, 0, 0.80)'};
     margin-top: 130px;
 
     width: 342px;
@@ -25,9 +25,4 @@ export const Button = styled.button`
 
     &:hover { opacity: 0.8; }
     &:active { opacity: 0.6; }
-
-    ${props => props.isBack && `
-        background: transparent;
-        border: 1px solid #FFF;
-    `}
 `;
