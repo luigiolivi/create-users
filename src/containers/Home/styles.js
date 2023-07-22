@@ -30,7 +30,6 @@ export const ContainerItems = styled.div`
     flex-direction: column;
 
     height: 100%;
-    min-height: calc(100vh - 170px);
 `;
 
 export const InputLabel = styled.p`
@@ -64,33 +63,4 @@ export const Input = styled.input`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-`;
-
-export const Button = styled.button`
-    border-radius: 14px;
-    border: none;
-    background: rgba(0, 0, 0, 0.80);
-
-    margin-top: 130px;
-
-    width: 342px;
-    height: 74px;
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 28px;
-
-    color: white;
-
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-
-    &:hover { opacity: 0.8; }
-
-    &:active { opacity: 0.6; }
 `;

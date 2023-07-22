@@ -18,50 +18,6 @@ export const Image = styled.img`
     margin-top: 30px;
 `;
 
-export const ContainerItems = styled.div`
-    border-radius: 61px 61px 0px 0px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.60) 0.01%, rgba(255, 255, 255, 0.15) 100%);
-    backdrop-filter: blur(22.5px);
-    
-    padding: 50px 36px;
-    
-    display: flex;
-    flex-direction: column;
-
-    height: 100%;
-    min-height: calc(100vh - 170px);
-`;
-
-export const Button = styled.button`
-    border-radius: 14px;
-    border: none;
-    background: transparent;
-    margin-top: 120px;
-
-    width: 342px;
-    height: 74px;
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 28px;
-
-    padding: 23px 148px 23px 101px;
-    align-items: center;
-    gap: 24.055px;
-
-    color: white;
-    border: 1px solid #FFF;
-
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-
-    &:hover { opacity: 0.8; }
-    &:active { opacity: 0.6; }
-`;
-
 export const User = styled.li`
     display: flex;
     justify-content: space-around;

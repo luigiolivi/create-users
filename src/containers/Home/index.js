@@ -6,7 +6,9 @@ import Talking from "../../assets/talking.png"
 import Right from "../../assets/right.png"
 
 import H1 from '../../components/Title'
-import { Container, Image, ContainerItems, InputLabel, Input, Button } from "./styles"
+import ContainerItems from "../../components/ContainerItems"
+import Button from "../../components/Button"
+import { Container, Image, InputLabel, Input } from "./styles"
 
 function Users() {
   const [users, setUsers] = useState([]);
