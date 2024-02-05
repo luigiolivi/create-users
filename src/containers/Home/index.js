@@ -25,6 +25,7 @@ function Users() {
 
     setUsers([...users, newUser])
 
+    
     history.push("/users")
   }
 
