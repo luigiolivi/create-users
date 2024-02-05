@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     async function fetchUsers() {
-      const { data: newUsers } = await axios.get("http://localhost:3001/users")
+      const { data: newUsers } = await axios.get("https://create-users-backend-production.up.railway.app/users")
       
       setUsers(newUsers)
     }
