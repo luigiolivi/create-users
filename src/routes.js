@@ -9,7 +9,7 @@ function myRoutes() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/create-users" component={Home} />
         <Route exact path="/users" component={Users} />
       </Switch>
     </Router>
