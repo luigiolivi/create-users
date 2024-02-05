@@ -28,7 +28,7 @@ function App() {
   }, [])
 
   async function deleteUser(userId) {
-    await axios.delete(`http://localhost:3001/users/${userId}`)
+    await axios.delete(`https://create-users-backend-production.up.railway.app/users/${userId}`)
     const newUsers = users.filter(user => user.id !== userId)
     setUsers(newUsers)
   }
